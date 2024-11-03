@@ -1,0 +1,220 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-right: auto;
+}
+
+input[type="text"] {
+    padding: 10px; /* Adjusts the height and inner padding */
+    padding-left: 15px; /* Adds space between the left border and text */
+    border-radius: 5px;
+    border: none;
+    width: 500px; /* Controls the field width */
+    margin-right: 10px;
+}
+
+input[type="text"]::placeholder {
+    color: #999; /* Optional: customize placeholder color */
+    text-align: left; /* Ensures placeholder is aligned left */
+}
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border-width: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 5px 10px; 
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+
+.navbar a {
+    color: #fff;
+    text-decoration: none; 
+    padding: 5px 10px; 
+    display: inline-block;
+    border-radius: 4px;
+    margin: 0; 
+    margin-right: 40px;
+}
+
+.navbar a:hover {
+    background-color: #555; 
+}
+
+/* Gaya untuk gambar dalam navbar */
+.navbar img {
+    width: 50px;
+    height: 50px;
+    margin: 0; 
+    vertical-align: middle;
+    margin-right: 0;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Konten Utama */
+.main-content {
+    margin-left: 220px;
+    padding: 2rem;
+}
+
+/* Heading */
+h1{ 
+    color: #ffffff;
+    margin-right: 100px;
+    margin-left: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2{
+    color: #333;
+    margin-top: 50px;
+    margin-left: 46px;
+    margin-bottom: 0;
+    
+}
+
+/* Buttons for Edit and Delete */
+.btn-edit, .btn-delete {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    margin: 0 2px;
+}
+
+.btn-edit {
+    background-color: #4CAF50;
+}
+
+.btn-delete {
+    background-color: #f44336;
+}
+
+/* Modal Style */
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#modal > div {
+    background: #fff;
+    padding: 60px;
+    margin: 100px auto;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#modal h2 {
+    margin: 0 0 10px;
+}
+
+#modal input[type="text"],
+#modal input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#modal input[type="submit"] {
+    padding: 5px 10px;
+}
+
+/* Style for Batal Button */
+#modal button[type="button"] {
+    padding: 5px 10px;
+    background-color: #ccc;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+#modal button[type="button"]:hover {
+    background-color: #bbb;
+}
+
+/* Label Styling */
+#modal label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; 
+    padding: 50px;
+    margin-top: 0;
+}
+.product-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+    max-width: 100px; 
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+.product-details {
+    font-size: 14px;
+}
+.product-details .price {
+    font-weight: bold;
+    color: #e74c3c;
+}
